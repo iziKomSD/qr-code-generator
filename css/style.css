@@ -1,0 +1,71 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #5ca4ea;
+  overflow: hidden;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20%;
+}
+a {
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+}
+
+button {
+  font-size: 30px;
+  padding: 10px 30px;
+  margin: 10px;
+  border: 0;
+  cursor: pointer;
+  color: white;
+  line-height: 1.2;
+  text-transform: lowercase;
+  border-radius: 10px;
+  display: inline-block;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.86, 0.01, 0.15, 0.99);
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0;
+}
+
+button.gradient:hover {
+  color: white;
+  box-shadow: 0 5px 5px rgba(17, 42, 110, 0.6);
+  transform: translateY(-5px);
+}
+
+.button-three {
+  -webkit-transform: perspective(1px) translateZ(0);
+  background: #049b25;
+  transform: perspective(1px) translateZ(0);
+  position: relative;
+  transition-timing-function: cubic-bezier(0.86, 0.01, 0.15, 0.99);
+  transition-duration: 0.4ss;
+}
+
+.button-three:before {
+  background: linear-gradient(to bottom, #26f564, #02b145);
+  transform: scaleY(0);
+  transform-origin: 0% 0%;
+  transition: 0.4s cubic-bezier(0.86, 0.01, 0.15, 0.99);
+}
+
+.button-three:hover:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+}
